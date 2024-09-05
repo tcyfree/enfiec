@@ -1,8 +1,6 @@
-A Deep Learning System to Discriminate Early Cancer from Probably Benign Lesions Assessed with Reporting and Data Systems
-====
+# ENhanced Feature Identifies Early Cancers (ENFIEC)
 **This is a Pytorch metacode of a deep learning system for discriminating early malignant lesions from probably benign lesions.This system includes more positive samples from lower suspicious malignant lesions that were also assessed with RADS and employs contrastive learning for learning more features of malignant lesions.** 
 
-![Data and strategy.](Figure1.jpg)
 
 ## 1.Requirements
 
@@ -53,9 +51,10 @@ You can choose between the following models in Nets file:
 * `VGG`: Very deep convolutional networks for large-scale image recognition. (2014).
 * `EfficienNet`: Efficientnetv2: Smaller models and faster training. in International Conference on Machine Learning 10096-10106 (PMLR, 2021).
 
-## 5.Load the pretraining weights of ultrasound datasets
-You can get the weights from [https://huggingface.co/MedicalUS/EDL-BC/tree/main](https://huggingface.co/MedicalUS/EDL-BC/tree/main).
-Then, this python file (```test.py```) can load the pretraining weights for your own breast ultrasound training or making a prediction. 
+## 5.Load the pretraining weights of three datasets
+You can get the weights from [WorldHeping/ENFIEC at main (huggingface.co)](https://huggingface.co/WorldHeping/ENFIEC/tree/main).
+Then, these Python files (```test.py``` and ```test_without.py```  ) can load pre trained weights for your own RADS graded lesions (where the weights we provide are breast and thyroid weights trained using B-ultrasound images and lung weights trained using CT images).
+
 
 
 
